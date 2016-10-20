@@ -1,0 +1,83 @@
+{
+    "students": [{
+            "student_id": "566"
+            , "first_name": "Alex"
+            , "last_name": "Mckenna"
+            , "email": "alex.m@school.org"
+            , "student_no": "90234555"
+            , "program_code": "1515x"
+        },
+        {
+            "student_id": "567"
+            , "first_name": "Devon"
+            , "last_name": "Stephens"
+            , "email": "devon.s@school.org"
+            , "student_no": "90654777"
+            , "program_code": "1515x"
+        },
+        {
+            "student_id": "568"
+            , "first_name": "Cole"
+            , "last_name": "Moir"
+            , "email": "cole.m@school.org"
+            , "student_no": "90121443"
+            , "program_code": "1515x"
+        },
+        {
+            "student_id": "569"
+            , "first_name": "Cara"
+            , "last_name": "Granger"
+            , "email": "cara.g@school.org"
+            , "student_no": "90845873"
+            , "program_code": "3002x"
+        },
+        {
+            "student_id": "570"
+            , "first_name": "Bree"
+            , "last_name": "Weasley"
+            , "email": "bree.w@school.org"
+            , "student_no": "90735822"
+            , "program_code": "3002x"
+        },
+        {
+            "student_id": "571"
+            , "first_name": "Krista"
+            , "last_name": "Potter"
+            , "email": "krista.p@school.org"
+            , "student_no": "90147283"
+            , "program_code": "3002x"
+        },
+        {
+            "student_id": "572"
+            , "first_name": "Cassandra"
+            , "last_name": "Stark"
+            , "email": "cassandra.s@school.org"
+            , "student_no": "90876122"
+            , "program_code": "6149x"
+        },
+        {
+            "student_id": "573"
+            , "first_name": "Grace"
+            , "last_name": "Banner"
+            , "email": "grace.b@school.org"
+            , "student_no": "90876134"
+            , "program_code": "6149x"
+        },
+        {
+            "student_id": "574"
+            , "first_name": "Paul"
+            , "last_name": "Romanov"
+            , "email": "paul.r@school.org"
+            , "student_no": "90877100"
+            , "program_code": "3013x"
+        },
+        {
+            "student_id": "575"
+            , "first_name": "Nina"
+            , "last_name": "Parker"
+            , "email": "nina.p@school.org"
+            , "student_no": "90115433"
+            , "program_code": "3013x"
+        }
+]
+}
