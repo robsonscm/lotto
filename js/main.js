@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("btnSend").addEventListener("click",robsonscm.genLottoNumbers);
     document.getElementById("btnBack").addEventListener("click", function () {
         //window.location.reload(true);
+        robsonscm.lottoAux = [];
         document.getElementById("digits").value = null;
         document.getElementById("max").value = null;
         document.getElementById("list").classList.remove("active");
