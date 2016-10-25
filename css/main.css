@@ -89,7 +89,7 @@ button{
     color: #FFF;
     font-size: 5vw;
     width: 50%;
-    height: 6vh;
+    height: 7vh;
     border: solid 3px #A0FF1E;
     text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.4), 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -126,11 +126,7 @@ button{
         padding: 12px;
         line-height: 1.2;
     }
-    .num_list li .numFrame:hover, .numFrame:active {
-        border: 3px solid #9100B2;
-        box-shadow: inset 0 0 0 5px #A0FF1E;
-    }
-
+/**/
 @media screen and (min-width:600px) {
     header, .formBox label {
         font-size: 5vw;
@@ -141,7 +137,7 @@ button{
     }
     button {
         font-size: 3.5vw;
-        height: 6vh;
+        height: 55px;
         width: 35%;
     }
     .num_list li .numFrame {
@@ -158,14 +154,14 @@ button{
     }
     button {
         font-size: 3vw;
-        height: 5.5vh;
+        height: 55px;
         width: 30%;
     }
     .num_list li .numFrame {
         font-size: 8vw;
     }
 }
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1000px){
     header, .formBox label {
         font-size: 4vw;
     }
@@ -175,7 +171,6 @@ button{
     }
     button {
         font-size: 2.5vw;
-        height: 6vh;
         width: 25%;
     }
     .num_list li .numFrame {
@@ -183,20 +178,37 @@ button{
     }
 }
 @media screen and (min-width: 1200px){
+    html {
+        font-size: 20px;
+        font-family: sans-serif;
+        background: url(../img/background.jpg) repeat top left;
+    }
+    #home, #list {
+        background: url(../img/bkg.jpg) no-repeat center center;
+        background-size: cover;
+        width: 50em;
+        height: 40rem;
+        margin: 0 auto;
+    }
     header, .formBox label {
-        font-size: 4vw;
+        font-size: 36px;
     }
     .formBox input {
-        font-size: 5vw;
+        font-size: 36px;
         width: 20%;
     }
     button {
-        font-size: 2.5vw;
-        height: 6vh;
+        font-size: 24px;
         width: 25%;
     }
     .num_list li .numFrame {
-        font-size: 6vw;
+        background: #FFFFFF;
+        border: 4px solid #A0FF1E;
+        box-shadow: inset 0 0 0 6px #9100B2;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 76px;
+        padding: 20px;
+        line-height: 1.2;
     }
 }
-
