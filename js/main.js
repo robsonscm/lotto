@@ -132,12 +132,17 @@ robsonscm.applyPad = function (target, pad, sizePad, position) {
         return (addPad + target);
     };
 };
-// document.addEventListener("DOMContentLoaded", robsonscm.genLottoNumbers);
-document.getElementById("digits").focus();
-document.getElementById("btnSend").addEventListener("click",robsonscm.genLottoNumbers);
-document.getElementById("btnBack").addEventListener("click", function () {
-    window.location.reload(true);
-    document.getElementById("list").classList.add("active");
-    document.getElementById("home").classList.remove("active");
-
+document.addEventListener("DOMContentLoaded", function () {
+    //
+    document.getElementById("digits").focus();
+    document.getElementById("btnSend").addEventListener("click",robsonscm.genLottoNumbers);
+    document.getElementById("btnBack").addEventListener("click", function () {
+        //window.location.reload(true);
+        document.getElementById("digits").value = null;
+        document.getElementById("max").value = null;
+        document.getElementById("list").classList.remove("active");
+        document.getElementById("home").classList.add("active");
+        document.getElementById("digits").focus();
+    });
+    //
 });
