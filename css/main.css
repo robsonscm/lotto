@@ -8,103 +8,108 @@
 html {
     font-size: 20px;
     font-family: sans-serif;
-    background: url(../img/background.jpg) top left repeat;
-}
-body {
-    margin: auto;
-    max-width: 25em;
-    width: 25em;
-    max-height: 25em;
-    height: 25em;
-    font-family: "Verdana","Arial","Helvetica",sans-serif;
-    line-height: 1.5;
-}
-#home, #list{
-    width: inherit;
-    height: inherit;
-    background: url(../img/bkg.jpg) no-repeat center;
+    background: url(../img/bkg.jpg) no-repeat center center fixed;
+    /*width: 852px;*/
+    /*height: 480px;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
-input {
-    width: 150px;
-    font-size: 32px;
-    text-align: center;
-    border: 3px solid #9100B2;
-    border-radius: 10px;
+body {
+    margin: 0 auto;
+    font-family: "Verdana","Arial","Helvetica",sans-serif;
+    line-height: 1.5;
+    /*border: 3px solid greenyellow;*/
 }
-input:active, input:focus {
-    box-shadow: 0 0 10px #9100B2,
-                0 0 10px #9100B2,
-                0 0 10px #9100B2;
-}
-header {
-    height: 20%;
+#home, #list{
     width: 100%;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px #000000,
-                -2px -2px 2px #000000,
-                    0 0 10px #9100B2,
-                    0 0 10px #9100B2,
-                    0 0 10px #9100B2,
-                    0 0 10px #9100B2,
-                    0 0 10px #9100B2,
-                    0 0 10px #FFFFFF,
-                    0 0 10px #FFFFFF,
-                    0 0 10px #FFFFFF;
-}
-.main {
-    height: 80%;
-    width: 100%;
-    text-align: center;
-    display: block;
-    clear: both;
-    margin: 0 0 0.5em 0;
-    padding: 6px 10px;
-}
-.page {
-    display: none;
-}
-.active {
-    display: block;
-}
-.formBox label, #textRange{
-    float: left;
-    width: 100%;
-    margin: 0 0 0.5em 0;
-    color: #FFF;
-    text-shadow: 1px 1px 2px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
-    font-weight: bold;
-    font-size: 1.5em;
-}
+    /*border: 3px solid cyan;*/
+    }
+    header {
+        width: 100%;
+        height: 20%;
+        font-size: 7vw;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px #000000,
+                    -2px -2px 2px #000000,
+                        0 0 10px #9100B2,
+                        0 0 10px #9100B2,
+                        0 0 10px #9100B2,
+                        0 0 10px #9100B2,
+                        0 0 10px #9100B2,
+                        0 0 10px #FFFFFF,
+                        0 0 10px #FFFFFF,
+                        0 0 10px #FFFFFF;
+    }
+    .main {
+        width: 100%;
+        height: 80%;
+        display: block;
+        clear: both;
+        text-align: center;
+        padding: 6px 10px;
+        /*border: 3px solid deeppink;*/
+    }
+    .page {
+        display: none;
+    }
+    .active {
+        display: block;
+    }
+/**/
+.formBox {
+        margin: 1.5em auto;
+    }
+    .formBox label {
+        float: left;
+        width: 100%;
+        color: #FFF;
+        text-shadow: 1px 1px 2px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+        font-weight: bold;
+        font-size: 7vw;
+        /*border: 3px solid yellow;*/
+    }
+    .formBox input {
+        width: 50%;
+        font-size: 10vw;
+        text-align: center;
+        border: 3px solid #9100B2;
+        border-radius: 10px;
+        }
+        input:active, input:focus {
+            box-shadow: 0 0 10px #9100B2,
+            0 0 10px #9100B2,
+            0 0 10px #9100B2;
+        }
+/**/
 button{
     background: #9100B2;
     color: #FFF;
-    font-size: .8em;
-    width: 250px;
-    height: 35px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    font-size: 5vw;
+    width: 50%;
+    height: 6vh;
     border: solid 3px #A0FF1E;
     text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.4), 0 3px 3px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.4), 0 3px 3px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.4), 0 3px 3px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 25em;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-}
-button:hover, button:focus {
-    background: #FC00FF;
-}
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    }
+    button:hover, button:focus {
+        background: #FC00FF;
+    }
+    #btnBack {
+        margin-top: 3em;
+    }
+/**/
 .num_list {
-    list-style-type: none;
-    text-align: center;
-    overflow: auto;
+        list-style-type: none;
+        text-align: center;
+        overflow: auto;
     }
     .num_list li {
         display: inline-block;
@@ -117,7 +122,7 @@ button:hover, button:focus {
         box-shadow: inset 0 0 0 5px #9100B2;
         border-radius: 50%;
         text-align: center;
-        font-size: 32px;
+        font-size: 12vw;
         padding: 12px;
         line-height: 1.2;
     }
@@ -125,3 +130,73 @@ button:hover, button:focus {
         border: 3px solid #9100B2;
         box-shadow: inset 0 0 0 5px #A0FF1E;
     }
+
+@media screen and (min-width:600px) {
+    header, .formBox label {
+        font-size: 5vw;
+    }
+    .formBox input {
+        font-size: 6vw;
+        width: 30%;
+    }
+    button {
+        font-size: 3.5vw;
+        height: 6vh;
+        width: 35%;
+    }
+    .num_list li .numFrame {
+        font-size: 10vw;
+    }
+}
+@media screen and (min-width: 800px){
+    header, .formBox label {
+        font-size: 4vw;
+    }
+    .formBox input {
+        font-size: 5vw;
+        width: 25%;
+    }
+    button {
+        font-size: 3vw;
+        height: 5.5vh;
+        width: 30%;
+    }
+    .num_list li .numFrame {
+        font-size: 8vw;
+    }
+}
+@media screen and (min-width: 1200px){
+    header, .formBox label {
+        font-size: 4vw;
+    }
+    .formBox input {
+        font-size: 5vw;
+        width: 20%;
+    }
+    button {
+        font-size: 2.5vw;
+        height: 6vh;
+        width: 25%;
+    }
+    .num_list li .numFrame {
+        font-size: 6vw;
+    }
+}
+@media screen and (min-width: 1200px){
+    header, .formBox label {
+        font-size: 4vw;
+    }
+    .formBox input {
+        font-size: 5vw;
+        width: 20%;
+    }
+    button {
+        font-size: 2.5vw;
+        height: 6vh;
+        width: 25%;
+    }
+    .num_list li .numFrame {
+        font-size: 6vw;
+    }
+}
+

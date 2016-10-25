@@ -1,11 +1,13 @@
 //NameSpace
 var robsonscm = {};
 //Variables
+robsonscm.fetchCount = 0;
 robsonscm.lottoAux = [];
 //
-robsonscm.genLottoNumbers = function () {
+robsonscm.genLottoNumbers = function (incremental) {
     //
     let lottoRange = robsonscm.lottoAux;
+    // let lottoRange = [];
     let objValidation = {};
     objValidation["digits"] = Number(document.getElementById("digits").value);
     objValidation["max"] = Number(document.getElementById("max").value);
@@ -31,6 +33,7 @@ robsonscm.genLottoNumbers = function () {
     //
     fetch(req).then(function(response){
                 //
+                robsonscm.fetchCount += 1;
                 return response.json();
                 //
             }).then(function(jsonData){
@@ -42,10 +45,14 @@ robsonscm.genLottoNumbers = function () {
                             lottoRange.push(item);
                         };
                     });
+                    console.log(lottoRange);
                     // alert(lottoRange.length + " -- " + this.numDigits);
                     if (lottoRange.length < objValidation.digits){
                         robsonscm.genLottoNumbers();
                     }else{
+                        console.log(robsonscm.fetchCount);
+                        robsonscm.fetchCount = 0;
+                        robsonscm.lottoAux = [];
                         robsonscm.displayResults(lottoRange.sort(robsonscm.sortCompare));
                     };
                 }else{
@@ -132,13 +139,13 @@ robsonscm.applyPad = function (target, pad, sizePad, position) {
         return (addPad + target);
     };
 };
+//
 document.addEventListener("DOMContentLoaded", function () {
     //
     document.getElementById("digits").focus();
     document.getElementById("btnSend").addEventListener("click",robsonscm.genLottoNumbers);
     document.getElementById("btnBack").addEventListener("click", function () {
         //window.location.reload(true);
-        robsonscm.lottoAux = [];
         document.getElementById("digits").value = null;
         document.getElementById("max").value = null;
         document.getElementById("list").classList.remove("active");
