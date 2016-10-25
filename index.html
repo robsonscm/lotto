@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>AJAX Lotto</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 </head>
 <body>
     <div id="home" class="page active">
@@ -15,9 +15,11 @@
                 <label for="digits">Number of Digits</label>
                 <input id="digits" type="number" max="10" min="1" placeholder="6" class="sm" />
             </p>
+            <br>
             <p class="formBox">
-                <label for="max">Range</label>
-                <span>1 to </span><input id="max" type="number" min="2" max="99" placeholder="49" class="sm" />
+                <label for="max">Range 1 to</label>
+                <!--<span id="textRange">1 to </span>-->
+                <input id="max" type="number" min="2" max="99" placeholder="49" class="sm" />
             </p>
             <p class="formBox buttons">
                 <button id="btnSend">Generate Numbers</button>

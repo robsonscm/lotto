@@ -63,20 +63,23 @@ robsonscm.genLottoNumbers = function () {
 //
 robsonscm.formValidation = function (obj) {
     //
-    let minNumDigits = Number(document.getElementById("digits").min);
-    let maxNumDigits = Number(document.getElementById("digits").max);
-    let minNumRange = Number(document.getElementById("max").min);
-    let maxNumRange = Number(document.getElementById("max").max);
+    // alert(obj.digits + "---" + obj.max + "---" + "");
     //
-    // alert(obj.digits + "---" + minNumDigits + "---" + maxNumDigits);
-    //
-    if ((obj.digits == null) || (obj.digits < minNumDigits) || (obj.digits > maxNumDigits)) {
-        alert("Number of digits must be between "+ minNumDigits + " and " + maxNumDigits + "!");
-        return false;
+    if (obj.digits == null || obj.digits == 0){
+        obj["digits"] = Number(document.getElementById("digits").placeholder);
+    }else{
+        if ((obj.digits < Number(document.getElementById("digits").min)) || (obj.digits > Number(document.getElementById("digits").max))){
+            alert("Number of digits must be between "+ Number(document.getElementById("digits").min) + " and " + Number(document.getElementById("digits").max) + "!");
+            return false;
+        }
     };
-    if ((obj.max == null)  || (obj.max < minNumRange) || (obj.max > maxNumRange)) {
-        alert("Final range number must be between "+ minNumRange + " and " + maxNumRange + "!");
-        return false;
+    if (obj.max == null || obj.max == 0){
+        obj["max"] = Number(document.getElementById("max").placeholder);
+    }else{
+        if ((obj.max < Number(document.getElementById("max").min)) || (obj.max > Number(document.getElementById("max").max))) {
+            alert("Final range number must be between "+ Number(document.getElementById("max").min) + " and " + Number(document.getElementById("max").max) + "!");
+            return false;
+        }
     };
     if (obj.max < obj.digits) {
         alert("Number of digits must be less or equal than final range number!");
@@ -91,9 +94,15 @@ robsonscm.displayResults = function (lottoNumbers) {
     ul.innerHTML = "";  //clear out the old list
     lottoNumbers.forEach(function(item){
         let li = document.createElement("li");
-        li.innerHTML = robsonscm.applyPad(item,"0");
+        let box = document.createElement("div");
+        box.className = "numFrame";
+        li.appendChild(box);
+        //
+        box.innerHTML = robsonscm.applyPad(item,"0");
         ul.appendChild(li);
     });
+    document.getElementById("list").classList.add("active");
+    document.getElementById("home").classList.remove("active");
 };
 //
 robsonscm.sortCompare = function (a,b) {
@@ -124,7 +133,11 @@ robsonscm.applyPad = function (target, pad, sizePad, position) {
     };
 };
 // document.addEventListener("DOMContentLoaded", robsonscm.genLottoNumbers);
+document.getElementById("digits").focus();
 document.getElementById("btnSend").addEventListener("click",robsonscm.genLottoNumbers);
 document.getElementById("btnBack").addEventListener("click", function () {
     window.location.reload(true);
+    document.getElementById("list").classList.add("active");
+    document.getElementById("home").classList.remove("active");
+
 });
