@@ -25,8 +25,8 @@ robsonscm.genLottoNumbers = function (incremental) {
     formData.append("max"   , objValidation.max);
     //
     let params = {
-        method: 'POST',
-        mode: 'CORS',
+        method: 'post',
+        mode: 'cors',
         body: formData
     };
     let req = new Request(url, params);
